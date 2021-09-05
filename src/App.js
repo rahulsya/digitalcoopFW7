@@ -1,25 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Routers from "./routers";
+import { App, View, Page } from "framework7-react";
+export default function index() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <App theme="auto" name="My App">
+      <View main>
+        <Page>
+          <Routers />
+        </Page>
+      </View>
+    </App>
   );
 }
-
-export default App;
